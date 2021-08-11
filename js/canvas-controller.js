@@ -54,6 +54,29 @@ function onMoveDown() {
     currLine['y'] += 5
     drawImg()
 }
+
+function onAlignCenter() {
+    var currLine = getCurrentLine()
+    var txtSize = gCtx.measureText(currLine.txt).width;
+    currLine['x'] = (gCanvas.width / 2) - (txtSize / 2)
+    drawImg()
+}
+
+function onAlignLeft(){
+    var currLine = getCurrentLine()
+    var txtSize = gCtx.measureText(currLine.txt).width;
+    currLine['x'] = 0
+    drawImg()
+}
+
+function onAlignRight(){
+    var currLine = getCurrentLine()
+    var txtSize = gCtx.measureText(currLine.txt).width;
+    currLine['x'] = gCanvas.width - txtSize
+    drawImg()
+}
+
+
 function onDeleteLine() {
     deleteLine()
     drawImg()

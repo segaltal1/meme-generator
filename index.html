@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEME</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/1ed641f7ad.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/img/logo.png">
+    <link rel="icon" href="img/logo.png">
 
 </head>
 
@@ -17,9 +17,9 @@
         <div class="header-content main-layout flex ">
             <div class="logo flex  align-center">Meme Generator</div>
             <ul class="main-nav   flex  align-center  clean-list">
-                <li><a href="#" onclick="showGallery()">Gallery</a></li>
+                <li><a href="" onclick="showGallery()">Gallery</a></li>
                 <li><a href="#">Memes</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#footer">About</a></li>
             </ul>
         </div>
         <!-- <button class="btn-menu-toggle" onclick="toggleMenu()">☰</button> -->
@@ -40,7 +40,9 @@
                 <button onclick="onChangeSize('-10')"><i class="far fa-minus-square"></i></button>
                 <button onclick="onMoveUp()"><i class="fas fa-arrow-alt-circle-up"></i></button>
                 <button onclick="onMoveDown()"><i class="fas fa-arrow-alt-circle-down"></i></button>
-                 
+                <button onclick="onAlignLeft()"><i class="fas fa-align-left"></i></button>
+                <button onclick="onAlignCenter()"><i class="fas fa-align-center"></i></button>
+                <button onclick="onAlignRight()"><i class="fas fa-align-right"></i></button>
             </div>
         </div>
 
@@ -50,11 +52,11 @@
 
 
 
-    <footer class="main-footer">
+    <footer class="main-footer"  id="footer">
         <div class="footer-logo      main-layout">Blogin</div>
         <small class="footer-copyright  main-layout   ">© 2014 Blogin.com - All Rights Reserved - Find more free
             Templates at lin <a href="Pixelhint.com">Pixelhint.com</a> </small>
-        <div class="main-layout">
+        <div class="main-layout"> 
             <ul class="social-nav clean-list main-layout flex">
                 <li class="fa fa-facebook"><a href="social-facebook"></a></li>
                 <li class="fa fa-twitter"><a href="social-twitter"></a></li>
