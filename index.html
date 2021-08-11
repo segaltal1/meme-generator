@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEME</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/1ed641f7ad.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/img/logo.png">
+
+</head>
+
+<body onload='onInit()'>
+    <header class="main-header  flex align-center space-between">
+        <div class="header-content main-layout flex ">
+            <div class="logo flex  align-center">Meme Generator</div>
+            <ul class="main-nav   flex  align-center  clean-list">
+                <li><a href="#" onclick="showGallery()">Gallery</a></li>
+                <li><a href="#">Memes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <!-- <button class="btn-menu-toggle" onclick="toggleMenu()">☰</button> -->
+    </header>
+
+    <main class="main main-layout">
+        <div class="editor display">
+            <div class="canvas-container">
+                <canvas id="canvas" width="450" height="450"></canvas>
+            </div>
+
+            <div class="control-box">
+                <input type="text" onkeypress="onWriteText(this)" onkeyup="onWriteText(this)" class="input-text "
+                    data-trans="text-placeholder" placeholder="Your Text Here: " />
+                <button onclick="onAddLine()"><i class="fas fa-plus"></i></button>
+                <button onclick="onDeleteLine()"><i class="fas fa-trash"></i></button>
+                <button onclick="onChangeSize('10')"><i class="far fa-plus-square"></i></button>
+                <button onclick="onChangeSize('-10')"><i class="far fa-minus-square"></i></button>
+                <button onclick="onMoveUp()"><i class="fas fa-arrow-alt-circle-up"></i></button>
+                <button onclick="onMoveDown()"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                 
+            </div>
+        </div>
+
+    </main>
+    <div class="gallery  main-layout"></div>
+
+
+
+
+    <footer class="main-footer">
+        <div class="footer-logo      main-layout">Blogin</div>
+        <small class="footer-copyright  main-layout   ">© 2014 Blogin.com - All Rights Reserved - Find more free
+            Templates at lin <a href="Pixelhint.com">Pixelhint.com</a> </small>
+        <div class="main-layout">
+            <ul class="social-nav clean-list main-layout flex">
+                <li class="fa fa-facebook"><a href="social-facebook"></a></li>
+                <li class="fa fa-twitter"><a href="social-twitter"></a></li>
+                <li class="fa fa-behance"><a href="social-behance"></a></li>
+                <li class="fa fa-dribbble"><a href="social-dribble"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/canvas-controller.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/gallery-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
+
+</body>
+
+</html>
