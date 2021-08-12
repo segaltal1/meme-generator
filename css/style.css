@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: Atma-medium;
-    src: url(/fonts/Atma/Atma-Medium.ttf);
+    src: url(./fonts/Atma/Atma-Medium.ttf);
 }
 
 @font-face {
     font-family: Cross;
-    src: url(/fonts/cross/Crosshatcher\ D.otf);
+    src: url(./fonts/cross/Crosshatcher\ D.otf);
 }
 
 /* BASE */
