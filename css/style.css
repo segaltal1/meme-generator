@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: Cross;
-    src: url(../fonts/cross/Crosshatcher\ D.otf);
+    src: url(../fonts/cross/Crosshatcher1.ttf)
 }
 
 /* BASE */
@@ -24,7 +24,7 @@ html {
 
 body {
     margin: 0;
-}
+}   
 
 a {
     text-decoration: none;

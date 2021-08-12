@@ -48,13 +48,12 @@ function createLine(x, y, txt = 'Write Here!', size = 40, align = '', font = 'At
 function getCurrentLine() {
     return gMeme.lines[gMeme.selectedLineIdx];
 }
-
 function setMeme(meme) {
     gMeme = meme;
 }
 
-function deleteLine(){
-    if (gMeme.selectedLineIdx ) {
+function deleteLine() {
+    if (gMeme.selectedLineIdx) {
         gMeme.lines.splice(gMeme.selectedLineIdx, 1);
         document.querySelector('.input-text').value = '';
         gMeme.selectedLineIdx = 0;
