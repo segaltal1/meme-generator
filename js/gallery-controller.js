@@ -14,8 +14,8 @@ function renderGallery() {
 }
 
 function onSelectedMeme(element) {
-    document.querySelector('.gallery').classList.add('display')
-    document.querySelector('.editor').classList.remove('display')
+    document.querySelector('.gallery').classList.add('not-display')
+    document.querySelector('.editor').classList.remove('not-display')
     // var url 
     // drawImg(element.data);d
     initCanvas()
@@ -28,6 +28,15 @@ function onSelectedMeme(element) {
 }
 
 function showGallery() {
-    document.querySelector('.gallery').classList.remove('display')
-    document.querySelector('.editor').classList.add('display')
+    document.querySelector('.gallery').classList.remove('not-display')
+    document.querySelector('.editor').classList.add('not-display')
+}
+
+function toggleMenu() {
+    document.body.classList.toggle('menu-open');
+    if (document.body.classList.contains('menu-open')) {
+
+        document.querySelector('.btn-menu-toggle').innerText = 'X'
+    }
+    else document.querySelector('.btn-menu-toggle').innerText = '☰'
 }

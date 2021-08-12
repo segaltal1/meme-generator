@@ -22,6 +22,7 @@ function setNewLine(value, type) {
 }
 function addLine(txt) {
     gLineId++;
+    console.log(txt);
     gMeme.selectedLineIdx = gMeme.lines.length;
     var startY
     if (gMeme.lines.length === 0) startY = 80;
@@ -61,4 +62,23 @@ function deleteLine() {
 }
 function getMeme() {
     return gMeme;
+}
+
+function setWidthTxt(lineId, widthTxt) {
+    const lineIdx = findLineIdx(lineId);
+    if (lineIdx === -1) return;
+    gMeme.lines[lineIdx].widthTxt = widthTxt;
+}
+
+function findLineIdx(lineId) {
+    return gMeme.lines.findIndex((line => {
+        return lineId === line.id
+    }))
+}
+
+function setCurrLineIdx(lineId) {
+    var lineIdx = findLineIdx(lineId);
+    if (lineIdx === -1) return;
+    gMeme.selectedLineIdx = lineIdx;
+    document.querySelector('.input-text').value = gMeme.lines[gMeme.selectedLineIdx].txt;
 }
