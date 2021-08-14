@@ -8,24 +8,23 @@
     <title>MEME</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/1ed641f7ad.js" crossorigin="anonymous"></script>
-    <link rel="icon"   href="./img/logo.png?">
+    <link rel="icon" href="./img/logo.png?">
 
 </head>
 
-<body onload='onInit()'>
+<body onload="onInit()">
     <div class="screen" onclick="toggleMenu()"></div>
     <header class="main-header">
         <div class="header-content main-layout flex ">
             <div class="logo flex  align-center">Meme Generator</div>
             <ul class="main-nav   flex  align-center  clean-list">
                 <li><a href="" onclick="showGallery()">Gallery</a></li>
-                <li><a href="">Memes</a></li>
-                <li><a href="#footer" onclick="toggleMenu()">About</a></li>
+                <li><a href="" onclick="onShowSavedMemes();return false;" ontouchend="toggleMenu()">Memes</a></li>
+                <li><a href="#footer" ontouchend="toggleMenu()">About</a></li>
             </ul>
             <button class="btn-menu-toggle not-display" onclick="toggleMenu()">☰</button>
         </div>
     </header>
-
     <main class="main main-layout">
         <div class="editor not-display">
             <div class="canvas-container">
@@ -59,8 +58,8 @@
                 <button class="download-btn">
                     <a href="#" onclick="onDownload(this)" download="myphoto"> <i class="fas fa-file-download"></i></a>
                 </button>
-                <button class="share-btn">
-                    <a href="#" onclick="onSave()"> <i class="fas fa-share-alt"></i></a>
+                <button class="save-btn" onclick="onSave()">
+                    <a href="#"><i class="far fa-save"></i></i></a>
                 </button>
                 <div class="stickers flex">
                     <label onclick="onCreateSticker(this.innerText)" class="sticker">🎯</label>
@@ -78,15 +77,26 @@
         </div>
 
     </main>
-    <div class="gallery  main-layout"></div>
 
+    <div class="main-gallery main-layout">
+        <div class="search flex space-between align-center" style="padding: 10px;">
+            <div class="search-content">
+                <!-- <label for="search">Search</label> -->
+                <input type="search" onchange="onSearchImgs(this.value)" list="search" id="mysearch" autocomplete="off"
+                    name="search" placeholder="Seach.." />
+                <datalist id="search"></datalist>
+            </div>
+            <div class="key-words">
+            </div>
+        </div>
+        <div class="gallery "></div>
+    </div>
 
 
 
     <footer class="main-footer" id="footer">
         <div class="footer-logo  main-layout">Meme-Genereator</div>
-        <small class="footer-copyright  main-layout   ">© 2021 Meme-Genereator - All Rights Reserved - Find more free
-            Templates at lin <a href="Pixelhint.com">Pixelhint.com</a> </small>
+        <small class="footer-copyright  main-layout">© 2021 Meme-Genereator - All Rights Reserved - Tal Segal </small>
         <div class="main-layout">
             <ul class="social-nav clean-list main-layout flex">
                 <li class="fa fa-facebook"><a href="social-facebook"></a></li>
@@ -96,7 +106,6 @@
             </ul>
         </div>
     </footer>
-
     <script src="js/util-service.js"></script>
     <!-- <script src="js/i18n-service.js"></script> -->
     <script src="js/storage-service.js"></script>

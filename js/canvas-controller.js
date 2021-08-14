@@ -14,7 +14,7 @@ function initCanvas() {
     addMouseListener()
     addTouchListeners()
     if (window.innerWidth <= 550) {
-        gCanvas.width = gCanvas.height = 350;
+        gCanvas.width = gCanvas.height = 280;
     }
 
 }
@@ -101,14 +101,19 @@ function onAddLine() {
 
 }
 function onSave() {
-    var imgContent = gCanvas.toDataURL('image/jpeg');
-    var meme = {
-        id: makeId(),
-        img: imgContent,
-        gMeme
+    const currMeme = gCanvas.toDataURL('image/jpeg')
+    var memes = loadFromStorage(KEY_MEMES)
+    if (!memes || memes === null) {
+        var memes = [currMeme]
+        saveToStorage(KEY_MEMES, memes)
+        return
     }
-    saveToStorage(meme);
+    memes.push(currMeme)
+    saveToStorage(KEY_MEMES, memes)
 }
+
+
+
 function onCreateSticker(sticker) {
     setNewLine(sticker, 'txt');
     drawImg()
