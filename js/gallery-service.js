@@ -41,13 +41,12 @@ function getAllImages() {
 
 }
 function setCommonKeyWords(keyword) {
+    if( gKeywordsMap[keyword] > 60)return
     if (!gKeywordsMap[keyword]) {
         gKeywordsMap[keyword] = 16
         return
     }
     gKeywordsMap[keyword] += 5
-    console.log(gKeywordsMap);
-
 }
 function getKeyWordsFrequency(keyword) {
     return gKeywordsMap[keyword]

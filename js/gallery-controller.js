@@ -80,3 +80,4 @@ function toggleMenu() {
     }
     else document.querySelector('.btn-menu-toggle').innerText = '☰'
 }
+ 

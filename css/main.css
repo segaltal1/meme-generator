@@ -357,4 +357,12 @@ footer {
         overflow-x: auto;
         overflow-y: hidden;
     }
+    input[type=search] {
+        width: 80%;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    input[type=search]:focus {
+        width: 100%;
+    }
 }
