@@ -78,32 +78,49 @@
 
     </main>
 
+    
     <div class="main-gallery main-layout">
-        <div class="search flex space-between align-center" style="padding: 10px;">
-            <div class="search-content">
+        <div class="search flex space-between align-center">
+            <div class="search-content flex">
                 <input type="search" onchange="onSearchImgs(this.value)" list="search" id="mysearch" autocomplete="off"
                     name="search" placeholder="Search" />
                 <datalist id="search"></datalist>
+                <div class="upload">
+                    <label for="file"><i class="far fa-images"></i></label>
+                    <input type="file" id="file" class="file-input btn not-display" name="image"
+                        onchange="onImgInput(event)" />
+
+                </div>
             </div>
             <div class="key-words">
             </div>
         </div>
         <div class="gallery "></div>
     </div>
+    <section class="about main-layout">
+        <div class="about-content">
+            <img class="profile-img" src="img/profile.jpg" alt="">
+            <h4>Tal Segal</h4>
+            <p class="text-muted">FullStack Developer</p>
+            <a href="https://www.facebook.com/profile.php?id=100000608010874">
+                <i class="fa fa-facebook"></i>
+                <a href="https://www.linkedin.com/in/tal-segal1/">
+                    <i class="fa fa-linkedin"></i>
+                    <div class=" ">
+                        <p class="about-description">Young programmer fully motivated. Completed
+                            studies
+                            at Coding
+                            Academy graduated as a computer technician.
+                            Has excellent interpersonal communication.</p>
+                    </div>
+        </div>
+    </section>
 
 
-
-    <footer class="main-footer" id="footer">
+    <footer class="main-footer main-layout" id="footer">
         <div class="footer-logo  main-layout">Meme-Genereator</div>
         <small class="footer-copyright  main-layout">© 2021 Meme-Genereator - All Rights Reserved - Tal Segal </small>
-        <div class="main-layout">
-            <ul class="social-nav clean-list main-layout flex">
-                <li class="fa fa-facebook"><a href="social-facebook"></a></li>
-                <li class="fa fa-twitter"><a href="social-twitter"></a></li>
-                <li class="fa fa-behance"><a href="social-behance"></a></li>
-                <li class="fa fa-dribbble"><a href="social-dribble"></a></li>
-            </ul>
-        </div>
+        
     </footer>
     <script src="js/util-service.js"></script>
     <!-- <script src="js/i18n-service.js"></script> -->

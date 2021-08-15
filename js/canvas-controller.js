@@ -95,6 +95,10 @@ function drawImg() {
     }
 }
 
+function renderImg(img) {
+    gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
+}
+
 function onAddLine() {
     document.querySelector('.input-text').value = ''
     addLine()
@@ -240,7 +244,17 @@ function drawText() {
     })
 }
 
+function loadImageFromInput(ev, onImageReady) {
 
+    var reader = new FileReader()
+
+    reader.onload = function (event) {
+        var img = new Image()
+        img.onload = onImageReady.bind(null, img)
+        img.src = event.target.result
+    }
+    reader.readAsDataURL(ev.target.files[0])
+}
 
 function resizeCanvas() {
     var elContainer = document.querySelector('.canvas-container');

@@ -28,6 +28,20 @@ function showGallery() {
     document.querySelector('.main-gallery').classList.remove('not-display')
     document.querySelector('.editor').classList.add('not-display')
 }
+function onImgInput(ev) {
+    document.querySelector('.main-gallery').classList.add('not-display')
+    document.querySelector('.editor').classList.remove('not-display')
+    loadImageFromInput(ev, renderImg)
+
+}
+
+function renderImg(img) {
+    addImg(img.src)
+    initCanvas()
+    let meme = createMeme(99)
+    setMeme(meme)
+    drawImg(img)
+}
 
 function onShowSavedMemes() {
     document.querySelector('.main-gallery').classList.remove('not-display')
@@ -80,4 +94,3 @@ function toggleMenu() {
     }
     else document.querySelector('.btn-menu-toggle').innerText = '☰'
 }
- 

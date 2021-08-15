@@ -41,7 +41,7 @@ function getAllImages() {
 
 }
 function setCommonKeyWords(keyword) {
-    if( gKeywordsMap[keyword] > 60)return
+    if (gKeywordsMap[keyword] > 60) return
     if (!gKeywordsMap[keyword]) {
         gKeywordsMap[keyword] = 16
         return
@@ -58,13 +58,7 @@ function getSavedMemes(memes) {
     })
     return strHtmls.join('')
 }
-// function getImgsForDisplay() {
-//     if (gFilterBy === '') return gImgs;
-//     let imgs = gImgs.filter(function (img) {
-//         return (img.keywords.includes(gFilterBy))
-//     })
-//     return imgs;
-// }
+
 
 function getImgById(imgId) {
     return gImgs.find(image => image.id === imgId);
@@ -102,6 +96,11 @@ function getImgsForDisplay(images) {
         return ` <img onclick="onSelectedMeme(this)"  class="meme" 
         data-id=${img.id} src=${img.url} data-title= ${img.keywords}>`
     })
+}
+
+function addImg(url, keyword = 'none') {
+    var image = { id: 99, url, keyword };
+    gImgs.push(image)
 }
 
 function getImages() {
