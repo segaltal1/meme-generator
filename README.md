@@ -1,9 +1,11 @@
 # Meme-Generator
 
 Multi-functions meme generator, responsive for mobile.
+<br/>
+Build with: HTML , CSS , JS
 @Coding-academy.
 
-**Check it out LIVE here <a href="https://liamzety.github.io/Meme-Generator/">Meme-Generator</a>**
+**Check it out LIVE here <a href="https://segaltal1.github.io/meme-generator/">Meme-Generator</a>**
  
 # Main
 > The main screen where you can: 
@@ -12,7 +14,7 @@ Multi-functions meme generator, responsive for mobile.
 - search and filter through existing ones 
 - select an image to meme on
 
-<img src="https://i.ibb.co/H7cQ8mm/meme-main.jpg" alt="meme-main"  >
+<img src="https://i.im.ge/2021/10/12/olpa4S.jpg"  >
 
 **Editor**
 > In the editor you can: 
@@ -22,8 +24,8 @@ Multi-functions meme generator, responsive for mobile.
 - add emoji
 - save the meme to the saved meme page
 
-<img src="https://i.ibb.co/RBBSKJt/meme-editor.jpg" />
+<img src="https://i.im.ge/2021/10/12/olps3y.jpg" />
 
 **Mobile**
 
-<img src="https://i.ibb.co/BtT2KjX/meme-mobile.jpg" />
+<img src="https://i.im.ge/2021/10/12/olpqLJ.jpg" />
